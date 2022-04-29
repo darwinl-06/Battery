@@ -51,6 +51,16 @@ public class Company{
     }
 
     public String showTotalBatteries() {
+
+        for(int i=0;i<MAX_BATTERIES;i++) {
+                
+            if(batteries[i]!=null) {			
+                
+                System.out.println(batteries[i].toString());	
+            }
+        }
+        
+
     	return "";
     }
     
