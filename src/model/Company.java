@@ -1,5 +1,7 @@
 package model;
 
+import java.nio.file.LinkOption;
+
 public class Company{
 	
     public static final int MAX_BATTERIES = 10;
@@ -20,8 +22,20 @@ public class Company{
 
     }
 
-    public void registerRechargeableBattery(String name, double voltage, double cost, double capacity, int chargerNumber, char type) {
+    public void registerRechargeableBattery(String name, double voltage, double cost, double capacity, int chargerNumber, char type1) {
         int emtyPos = getEmtyPosition();
+
+        Type type = Type.LITIO;
+
+        switch(type1) {
+
+            case 1:
+                type = Type.LITIO;
+                break;
+            case 2:
+                type = Type.NIQUEL_CADIO;
+        }
+
         batteries[emtyPos] = new RechargeableBattery(name, voltage, cost, capacity, chargerNumber ,type);
         
     }

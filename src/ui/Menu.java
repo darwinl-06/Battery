@@ -118,11 +118,11 @@ public class Menu {
         System.out.println("Ingrese el numero de cargas");
         chargerNumber = sc.nextInt();
 
-        char type;
-        System.out.println("¿cual es el tipo de bateria? Litio (l) o  Niquel-Cadio (n)");
-        type = sc.next().toCharArray()[0];
+        char type1;
+        System.out.println("cual es el tipo de bateria? Litio (l) o  Niquel-Cadio (2)");
+        type1 = sc.next().toCharArray()[0];
         
-        company.registerRechargeableBattery(name, voltage, cost, capacity, chargerNumber, type);
+        company.registerRechargeableBattery(name, voltage, cost, capacity, chargerNumber, type1);
         
     }
 
